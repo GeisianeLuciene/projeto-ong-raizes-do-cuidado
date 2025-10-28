@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecionando...</title>
+  <script>
+    // Redireciona o usuário para o index.html mantendo a rota original
+    const path = window.location.pathname;
+    const repo = '/projeto-ong-raizes-do-cuidado';
+    const newUrl = `${repo}/index.html#${path.replace(repo, '')}`;
+    window.location.replace(newUrl);
+  </script>
+</head>
+<body>
+  <p>Redirecionando...</p>
+</body>
+</html>

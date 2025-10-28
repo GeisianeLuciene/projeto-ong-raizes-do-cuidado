@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang=pt-br>
+<html lang=pt-BR>
 <head>
 <meta charset=UTF-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Raízes do Cuidado - Página Inicial</title>
+<title>Raízes do Cuidado</title>
 <base href=/projeto-ong-raizes-do-cuidado/ >
 <link rel=stylesheet href=css/style.css>
 <link rel=preconnect href=https://fonts.googleapis.com>
@@ -13,13 +13,13 @@
 <body>
 <header>
 <h1>Raízes do Cuidado</h1>
-<button class=menu-hamburguer aria-label="Abrir Menu">
+<button class=menu-hamburguer aria-label="Abrir Menu" aria-expanded=false aria-controls=menu-principal>
 <span></span>
 <span></span>
 <span></span>
 </button>
 <nav>
-<ul class=menu-principal>
+<ul class=menu-principal id=menu-principal>
 <li><a href=/projeto-ong-raizes-do-cuidado/ >Início</a></li>
 <li><a href=/projeto-ong-raizes-do-cuidado/projetos>Projetos</a></li>
 <li><a href=/projeto-ong-raizes-do-cuidado/cadastro>Participe</a></li>
@@ -29,10 +29,10 @@
 <main id=conteudo-principal>
 </main>
 <footer>
-<p>Entre em contato com: (XX) YYYYY-ZZZZ | email@ong.com</p>
-<p>&copy; 2025 Raízes do Cuidado. Todos os direitos reservados.</p>
+<p>Entre em contato com: (XX) YYYYY-ZZZZ | email@ong.com</p> <p>© 2025 Raízes do Cuidado. Todos os direitos reservados.</p>
 </footer>
 <script src=js/script.js></script>
 <script src=js/router.js type=module></script>
+<script>if(window.location.hash&&"/projeto-ong-raizes-do-cuidado/404.html"===window.location.pathname){const o=window.location.hash.substring(1);window.history.replaceState({},"",baseName+o)}</script>
 </body>
 </html>

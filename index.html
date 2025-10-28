@@ -1,48 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raízes do Cuidado - Página Inicial</title>
-    
-    <base href="/projeto-ong-raizes-do-cuidado/">
-    
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raízes do Cuidado</title>
+
+    <base href="/projeto-ong-raizes-do-cuidado/"> 
+
+    <link rel="stylesheet" href="css/style.css" /> 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-    <h1>Raízes do Cuidado</h1>
+        <h1>Raízes do Cuidado</h1>
 
-    <button class="menu-hamburguer" aria-label="Abrir Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+        <button class="menu-hamburguer" aria-label="Abrir Menu" aria-expanded="false" aria-controls="menu-principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-    <nav>
-<ul class=menu-principal>
-<li><a href=/projeto-ong-raizes-do-cuidado/ >Início</a></li>
-<li><a href=/projeto-ong-raizes-do-cuidado/projetos>Projetos</a></li>
-<li><a href=/projeto-ong-raizes-do-cuidado/cadastro>Participe</a></li>
-</ul>
-</nav>
-        
-</header>
+        <nav>
+            <ul class="menu-principal" id="menu-principal">
+                <li><a href="/projeto-ong-raizes-do-cuidado/">Início</a></li>
+                <li><a href="/projeto-ong-raizes-do-cuidado/projetos">Projetos</a></li>
+                <li><a href="/projeto-ong-raizes-do-cuidado/cadastro">Participe</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main id="conteudo-principal">  
+    <main id="conteudo-principal">
         </main>
 
     <footer>
-        <p>Entre em contato com: (XX) YYYYY-ZZZZ | email@ong.com</p>
-        <p>&copy; 2025 Raízes do Cuidado. Todos os direitos reservados.</p>
+        <p>Entre em contato com: (XX) YYYYY-ZZZZ | email@ong.com</p> <p>© 2025 Raízes do Cuidado. Todos os direitos reservados.</p>
     </footer>
 
     <script src="js/script.js"></script>
     <script src="js/router.js" type="module"></script>
-    
-</body>
 
+    <script>
+        if (window.location.hash && window.location.pathname === '/projeto-ong-raizes-do-cuidado/404.html') {
+            const newPath = window.location.hash.substring(1); // Remove o '#'
+            window.history.replaceState({}, '', baseName + newPath);
+            // Idealmente, chamar handleLocation() aqui, mas o router já faz isso no load.
+        }
+    </script>
+</body>
 </html>
