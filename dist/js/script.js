@@ -1,0 +1,1 @@
+const menuHamburguer=document.querySelector(".menu-hamburguer"),menuPrincipal=document.querySelector(".menu-principal");menuHamburguer.addEventListener("click",()=>{menuPrincipal.classList.toggle("nav-aberta")});

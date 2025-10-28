@@ -55,7 +55,7 @@ Este projeto consiste na criação de uma plataforma web para a ONG fictícia "R
 
 O projeto pode ser visualizado ao vivo através do link do GitHub Pages:
 
--   **Link do Site:** **[https://geisianeluciene.github.io/plataforma-ong-raizes-do-cuidado/](https://geisianeluciene.github.io/plataforma-ong-raizes-do-cuidado/)**
+-   **Link do Site:** **[https://geisianeluciene.github.io/projeto-ong-raizes-do-cuidado/](https://geisianeluciene.github.io/plataforma-ong-raizes-do-cuidado/)**
 
 Para rodar localmente (necessário para a navegação SPA funcionar):
 1.  Clone ou baixe o repositório.

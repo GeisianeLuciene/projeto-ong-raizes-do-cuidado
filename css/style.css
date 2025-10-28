@@ -98,7 +98,8 @@ header nav a {
     transition: all 0.2s ease-in-out;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:focus {
     color: var(--cor-neutra-clara);
     background-color: var(--cor-primaria-clara);
 }
@@ -116,7 +117,8 @@ header nav a:hover {
     transition: background-color 0.2s ease-in-out;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
     background-color: var(--cor-primaria-clara);
 }
 
@@ -423,4 +425,47 @@ input.erro {
 /* Mostra a mensagem de erro quando o campo tem a classe 'erro' */
 input.erro + .mensagem-erro {
     display: block;
+}
+
+/* ==========================================================================
+   7. ACESSIBILIDADE - MODO ESCURO (DARK MODE)
+   ========================================================================== */
+
+/* Esta regra "ouve" o sistema operacional do usuário */
+@media (prefers-color-scheme: dark) {
+
+    /* Quando o modo escuro está ativo, nós redefinimos nossas variáveis */
+    :root {
+        /* -- Paleta de Cores (Versão Escura) -- */
+        --cor-primaria: #4a936a;         /* Verde claro (era escuro) */
+        --cor-primaria-clara: #a3b18a;   /* Verde musgo (era claro) */
+        
+        --cor-secundaria: #dad7cd;       /* Bege (era verde musgo) */
+        --cor-secundaria-clara: #2a3d35; /* Fundo de header/footer (era bege) */
+
+        --cor-fundo: #1b2a22;            /* Fundo principal (era papel claro) */
+        --cor-texto: #fefae0;            /* Texto principal (era verde escuro) */
+        --cor-neutra-clara: #1e1e1e;     /* Fundo dos cards (era branco) */
+        --cor-neutra-escura: #dad7cd;    /* Texto de apoio (era verde cinza) */
+    }
+
+    /* Também precisamos inverter as imagens que não se dão bem com fundo escuro */
+    /* (Ex: O ícone de hambúrguer, se ele for escuro) */
+    .menu-hamburguer span {
+        background-color: var(--cor-texto); /* Muda as linhas do hambúrguer para a cor do texto */
+    }
+
+    /* Ajuste de fundo dos cards e inputs para o modo escuro */
+    .card-projeto,
+    input,
+    select {
+        background-color: var(--cor-neutra-clara);
+        border-color: var(--cor-secundaria-clara);
+    }
+
+    /* --- CORREÇÃO DE CONTRASTE DO BOTÃO --- */
+    .btn {
+        /* Força o texto do botão a ser branco puro no modo escuro */
+        color: #ffffff; 
+    }
 }
